@@ -4,7 +4,13 @@
 # If n is even, divide it by 2. If n is odd, multiply it by 3 and add 1.
 
 
+def check(n):
+    if not type(n) == int or n < 1:
+        raise ArithmeticError
+
+
 def calculate_conjecture(n, step):
+
     if n == 1:
         return step
 
@@ -18,4 +24,5 @@ def calculate_conjecture(n, step):
 
 
 def conjecture(n):
+    check(n)
     return calculate_conjecture(n, 1)
